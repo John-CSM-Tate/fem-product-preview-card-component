@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Frontend Mentor Challenge - product Preview Card Component Solution">
+  <meta name="keywords" content="HTML, CSS">
+  <meta name="author" content="John Tate">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
   <link rel="stylesheet" href="./src/css/style.css">
   <title>Frontend Mentor | Product preview card component</title>
@@ -17,7 +19,12 @@
   <main>
     <article class="product">
       <picture class="product-image">
-        <img src="./src/images/image-product-mobile.jpg" alt="Gabrielle Perfume Bottle">
+        <source 
+          srcset="src/images/image-product-desktop.jpg"
+          media="(min-width:600px)">
+        <img 
+          src="./src/images/image-product-mobile.jpg" 
+          alt="Gabrielle Perfume Bottle">
       </picture>
       <div class="product-info">
         <p class="product-category">perfume</p>
@@ -42,9 +49,9 @@
       </div>
     </article> 
   </main>
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">John Tate</a>.
-  </div>
+    Coded by <a href="https://github.com/John-CSM-Tate">John Tate</a>.
+  </footer>
 </body>
 </html>
