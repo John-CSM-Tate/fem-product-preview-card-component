@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor Solution Page](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa/hub/product-preview-card-component-C4bAJWMQEP)
 - Live Site URL: [Live Github Page](https://john-csm-tate.github.io/fem-product-preview-card-component/)
 
 ## My process
