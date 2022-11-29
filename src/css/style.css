@@ -1,14 +1,138 @@
+:root{
+    --body-background: hsl(30, 38%, 92%);
+    --card-background: hsl(0, 0%, 100%);
+    --text: hsl(228, 12%, 48%);
+    --heading: hsl(212, 21%, 14%);
+    --importance: hsl(158, 36%, 37%);
+    --hover: hsl(156, 42%, 18%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-color: var(--body-background);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text);
+
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+p, h1 {
+    overflow-wrap: break-word;
+}
+
+p {
+    line-height: 1.6;
+}
 
 
+.product {
+    background-color: var(--card-background);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.product-info {
+    padding: 1.5rem;
+    display: grid;
+    gap: 0.75rem;
+}
 
 
+.product-category {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.product-name {
+    color: var(--heading);
+    font-size: 2rem;
+    line-height: 1;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-current-price {
+    color: var(--importance);
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+}
+
+.product-original-price {
+    text-decoration: line-through;
+}
+
+.button {
+    display: inline-flex;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 0.5rem;
+    color: var(--card-background);
+    background-color: var(--importance);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.button[data-icon="shopping-cart"]::before {
+    content: "";
+    background-image: url("../images/icon-cart.svg");
+    width: 15px;
+    height: 16px;
+}
+
+.button:is(:hover, :focus) {
+    background-color: var(--hover);
+}
 
 
+/* Screen Reader */
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
 
 
-
-.attribution { 
-    font-size: 11px; text-align: center; 
+.attribution {
+    position: relative;
+    bottom: 0;
+    font-size: 11px; 
+    text-align: center; 
 }
 
 .attribution a { 
