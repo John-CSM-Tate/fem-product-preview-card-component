@@ -1,11 +1,19 @@
 :root{
     --body-background: hsl(30, 38%, 92%);
     --card-background: hsl(0, 0%, 100%);
-    --text: hsl(228, 12%, 48%);
-    --heading: hsl(212, 21%, 14%);
-    --importance: hsl(158, 36%, 37%);
-    --hover: hsl(156, 42%, 18%);
+    --text-general: hsl(228, 12%, 48%);
+    --text-heading: hsl(212, 21%, 14%);
+    --primary: hsl(158, 36%, 37%);
+    --primary-hover: hsl(156, 42%, 18%);
+
+    --font-family-sans: 'Montserrat', sans-serif;
+    --font-family-serif: 'Fraunces', serif;
+
+    --font-weight-normal: 500;
+    --font-weight-bold: 700;
 }
+
+/* Globel */
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -19,6 +27,8 @@ html, body {
     height: 100%;
 }
 
+/* Image Scaling */
+
 img {
     display: block;
     max-width: 100%;
@@ -26,14 +36,14 @@ img {
 
 body {
     background-color: var(--body-background);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-normal);
     font-size: 14px;
-    color: var(--text);
-
+    color: var(--text-general);
+    margin: 1rem;
+    /* Card postion */
     display: grid;
     place-content: center;
-    margin: 1rem;
 }
 
 p, h1 {
@@ -44,19 +54,25 @@ p {
     line-height: 1.6;
 }
 
-
 .product {
     display: grid;
     background-color: var(--card-background);
     border-radius: 0.5rem;
     overflow: hidden;
-    max-width: 600px;
-    
+    max-width: 350px;
 }
+
+.product-info {
+    padding: 1.5rem 1.7rem;
+    display: grid;
+    gap: 0.75rem;
+}
+/* Desktop Media Query */
 
 @media (min-width: 600px) {
     .product {
         grid-template-columns: 1fr 1fr;
+        max-width: 600px;
     }
 
     .product-info {
@@ -65,26 +81,21 @@ p {
 }
 
 
-.product-info {
-    padding: 1.5rem;
-    display: grid;
-    gap: 1rem;
-}
 
 .product-category {
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
 }
 
 .product-name {
-    color: var(--heading);
+    color: var(--text-heading);
     font-size: 2rem;
     line-height: 1;
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
+    font-family: var(--font-family-serif);
+    font-weight: var(--font-weight-bold);
 }
+
+/* price */
 
 .product-price {
     display: flex;
@@ -93,39 +104,40 @@ p {
 }
 
 .product-current-price {
-    color: var(--importance);
-    font-size: 2rem;
-    font-family: 'Fraunces', serif;
+    color: var(--primary);
+    font-size: 1.75rem;
+    font-family: var(--font-family-serif);
 }
 
 .product-original-price {
     text-decoration: line-through;
 }
 
+/* Button */
 .button {
     display: inline-flex;
     gap: 0.75rem;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
     border: 0;
     border-radius: 0.5rem;
     color: var(--card-background);
-    background-color: var(--importance);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    background-color: var(--primary);
+    font-family: var(--font-family-sans);
+    font-weight: var(--font-weight-bold);
 }
 
 .button[data-icon="shopping-cart"]::before {
     content: "";
     background-image: url("../images/icon-cart.svg");
     width: 15px;
-    height: 16px;
+    height: 15px;
 }
 
 .button:is(:hover, :focus) {
-    background-color: var(--hover);
+    background-color: var(--primary-hover);
 }
 
 
