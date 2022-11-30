@@ -60,3 +60,4 @@ Using html picture tag to change picture with a media query
 ## Author Links
 
 - Frontend Mentor - [@John-CSM-Tate](https://www.frontendmentor.io/profile/John-CSM-Tate)
+- [![Linkedin](https://i.stack.imgur.com/gVE0j.png) LinkedIn](https://www.linkedin.com/in/john-csm-tate/)
